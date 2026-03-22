@@ -8,11 +8,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://blindspot.news"),
   title: "Blind Spot — We see what others miss.",
   description:
     "Contrarian takes on markets, tech, and culture. The stuff everyone else is too polite to say.",
+  keywords: [
+    "contrarian",
+    "newsletter",
+    "markets",
+    "tech",
+    "culture",
+    "investing",
+    "analysis",
+  ],
+  authors: [{ name: "Policarpo" }],
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Blind Spot — We see what others miss.",
+    description:
+      "Contrarian takes on markets, tech, and culture. The stuff everyone else is too polite to say.",
+    url: "https://blindspot.news",
+    siteName: "Blind Spot",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blind Spot — We see what others miss.",
+    description:
+      "Contrarian takes on markets, tech, and culture. The stuff everyone else is too polite to say.",
   },
 };
 
@@ -23,7 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-black text-white`}>
+      <body
+        className={`${inter.variable} font-sans antialiased bg-black text-white`}
+      >
         {children}
       </body>
     </html>
