@@ -61,6 +61,39 @@ body {
   transform: translateY(0);
 }
 
+/* 3D Card Flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Konami mode */
+.konami-active {
+  animation: konamiPulse 0.3s ease-out;
+}
+
+@keyframes konamiPulse {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.5) hue-rotate(20deg); }
+  100% { filter: brightness(1); }
+}
+
+/* Custom cursor on crosshair elements */
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up {
